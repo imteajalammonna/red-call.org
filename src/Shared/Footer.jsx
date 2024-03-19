@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className="container mx-auto footer p-10 bg-white text-black border-t">
             <aside>
                 <img className="w-44" src={logo} alt="" />
-                <p className="ml-2">Red Call Organization.<br />Providing reliable tech since 1992</p>
+                <p className="ml-2">Red Call Organization.<br />Helping peoples for finding Emergency Blood, since 2024.</p>
             </aside>
             <nav>
                 <h6 className="footer-title">Social</h6>

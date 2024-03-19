@@ -7,9 +7,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      fontFamily: 'Poppins',
+      fontFamily: 'tiro-bangla',
       colors: {
-        primary: "#f98e2b",
+        primary: "#FFFFFF",
         secondary: "#f3f3f3",
       },
       animationDelay: {
@@ -20,8 +20,8 @@ export default {
     }, container: {
       center: true,
       padding: {
-        DEFAULT: "2rem",
-        md: "5rem",
+        DEFAULT: "1rem",
+        md: "3rem",
       },
     },
   },
