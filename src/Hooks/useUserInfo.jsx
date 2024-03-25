@@ -12,7 +12,8 @@ const useUserInfo = () => {
         queryFn: async () => {
             try {
                 const res = await axiosSecure.get(`/user?email=${user?.email}`);
-                return res.data[0];
+                console.log(res.data);
+                return res?.data[0];
             }
             catch (error) {
                 console.error('Error fetching user Information:', error);
@@ -20,7 +21,7 @@ const useUserInfo = () => {
             }
         },
         enabled: !!user,
-    })
+    });
 
 
     return [UserInfo, refetch, isPending, isLoading]

@@ -4,24 +4,45 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling for the entire page */
+}
+
+.topBtn {
+    background-color: #ff0000;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 23px;
+    /* margin: 10; */
+    border-radius: 5px;
+    padding: 4px;
+    transition: 0.5s ease;
+}
+.topBtn:hover {
+    background-color: #ff2121;
+    color: #ffffff;
+}
+
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     /* font-weight: 800; */
     font-style: normal;
     /* background-size: contain; */
 }
+
 .tiro-bangla {
     font-family: "Tiro Bangla", serif;
     font-style: normal;
-  }
-  
-  .tiro-bangla-regular-italic {
+}
+
+.tiro-bangla-regular-italic {
     font-family: "Tiro Bangla", serif;
     font-weight: 400;
     font-style: italic;
-  }
-  
-.active{
+}
+
+.active {
     border-bottom: 2px solid rgb(255, 52, 99);
 }
 
@@ -57,7 +78,8 @@
         padding: .7em .8em;
     }
 }
-.button2{
+
+.button2 {
     background-color: transparent;
     box-sizing: border-box;
     color: #ffffff;
@@ -89,6 +111,7 @@
         padding: .7em .8em;
     }
 }
+
 .button {
     background-color: #dc0202;
     box-sizing: border-box;
@@ -108,6 +131,7 @@
     text-align: center;
     transition: 0.5s ease;
 }
+
 .button:hover {
     color: #dc0202;
     border: 2px solid #dc0202;

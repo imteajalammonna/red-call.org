@@ -3,6 +3,7 @@ import img from "../assets/white-logo.png"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const [showPass, setShowPass] = useState(true);
@@ -12,10 +13,11 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password);
+        console.log( email, password);
 
         signInUser(email, password)
             .then(result => {
+                toast('success')
                 console.log(result.user);
             })
             .catch(error => {

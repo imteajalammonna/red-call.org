@@ -45,8 +45,8 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 w-full py-4 z-10 shadow-sm ${scrolled ? 'bg-primary shadow-lg' : 'bg-[#C60000]'}`}>
-            <div className="container mx-auto px-4">
+        <nav className={`fixed top-0 left-0 w-full py-2 z-10 shadow-sm ${scrolled ? 'bg-primary shadow-lg' : 'bg-[#C60000]'}`}>
+            <div className="container mx-auto px-2">
                 <div className="flex justify-between items-center">
                     <Link to={'/'}> <img className='w-36' src={scrolled ? logoRed : logoWhite} alt="" /> </Link>
                     <ul className={`hidden md:flex tiro-bangla flex-1 justify-end items-center space-x-6 ${scrolled ? 'text-black' : 'text-white'}`}>
