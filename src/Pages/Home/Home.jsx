@@ -33,10 +33,10 @@ const Home = () => {
     }
     return (<>
         <div className="md:bg-cover bg-left-top md:bg-center min-h-screen bg-no-repeat" style={{ backgroundImage: `url(${backgroundImg})` }}>
-            <div className="md:hidden pt-24 pl-12 md:pl-14 w-full">
+            <div className="md:hidden pt-24 pl-8 md:pl-14 w-full">
                 <img src={image} alt="" />
             </div>
-            <div className="text-white absolute top-[425px] md:top-[35%]  left-10 md:left-36">
+            <div className="text-white absolute top-[425px] md:top-[37%]  left-7 md:left-36">
                 <h1 className="text-4xl md:text-[93px] md:leading-[1.15] !font-extrabold uppercase tiro-bangla">Give a priceless <br /> donation</h1>
                 <h4 className="text-xl md:text-3xl mt-6 mb-10 tiro-bangla">The most generous donation is a blood donation.</h4>
                 <Link to="/register" className="md:ml-2"><Button>Join as a Donor</Button></Link>

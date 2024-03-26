@@ -6,7 +6,7 @@ const SideBar = () => {
     const links = <>
         <li> <NavLink to="/dashboard/home" className="p-1 m-4 space-y-5 hover:text-black duration-300">Dashboard</NavLink></li>
         <li> <NavLink to="/dashboard/profile" className="p-1 m-4 space-y-5 hover:text-black duration-300">Profile</NavLink></li>
-        <li> <NavLink to="/" className="p-1 m-4 space-y-5 hover:text-black duration-300">Team</NavLink></li>
+        <li> <NavLink to="/request" className="p-1 m-4 space-y-5 hover:text-black duration-300">Request for Donation</NavLink></li>
         <li> <NavLink to="/" className="p-1 m-4 space-y-5 hover:text-black duration-300">Settings</NavLink></li>
     </>
     return (

@@ -11,6 +11,7 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const { user, logOut } = useContext(AuthContext);
     const [userInfo] = useUserInfo();
+    console.log(userInfo);
     const links = <>
         <NavLink to="/" className="text-xl font-bold transition-colors duration-300">Home</NavLink>
         <NavLink to="/donors" className="text-xl font-bold transition-colors duration-300">Donors</NavLink>
@@ -45,7 +46,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 w-full py-2 z-10 shadow-sm ${scrolled ? 'bg-primary shadow-lg' : 'bg-[#C60000]'}`}>
+        <nav className={`fixed top-0 left-0 w-full py-2 z-50 shadow-sm ${scrolled ? 'bg-primary shadow-lg' : 'bg-[#C60000]'}`}>
             <div className="container mx-auto px-2">
                 <div className="flex justify-between items-center">
                     <Link to={'/'}> <img className='w-36' src={scrolled ? logoRed : logoWhite} alt="" /> </Link>

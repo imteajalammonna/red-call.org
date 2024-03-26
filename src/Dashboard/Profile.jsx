@@ -3,20 +3,23 @@ import useUserInfo from "../Hooks/useUserInfo";
 
 
 const Profile = () => {
-    const [userInfo, isLoading] = useUserInfo();
-    console.log([isLoading]);
+    const [userInfo, isPending] = useUserInfo();
+    console.log(isPending);
     // const isLoading = true;
-    if (!isLoading) {
+    if (!isPending) {
         return <div className="flex w-full items-center justify-center min-h-screen">
             <span className="loading  loading-lg loading-spinner text-[#dc0202]"></span>
         </div>
     }
     return (
         <div className="min-h-screen">
-            <div className="flex">
-                <img src={userInfo?.imageURL} alt="" />
+            <div className="m-32">
+                <div className="flex">
+                    <img className="rounded-full h-[400px] mb-20" src={userInfo?.imageURL} alt="" />
+                </div>
+                <h1 className="text-5xl font-bold">Name: {userInfo?.name || userInfo?.email}</h1>
+                <h1 className="text-2xl font-bold">Email: {userInfo?.displayName || userInfo?.email}</h1>
             </div>
-            <h1 className="text-5xl font-bold uppercase">{userInfo?.displayName || userInfo?.email}</h1>
         </div>
     );
 };

@@ -17,7 +17,7 @@ const Login = () => {
 
         signInUser(email, password)
             .then(result => {
-                toast('success')
+                toast('Login Successfully!')
                 console.log(result.user);
             })
             .catch(error => {
@@ -60,7 +60,7 @@ const Login = () => {
                             </div>
                             <input type="submit" value="Login" className="w-full button" />
                             <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                                Do not have an account? <Link to="/register" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Login</Link>
+                                Do not have an account? <Link to="/register" className="font-medium text-red-600 hover:underline dark:text-primary-600 underline">Register here</Link>
                             </p>
                         </form>
                     </div>

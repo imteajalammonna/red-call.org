@@ -12,7 +12,6 @@ import UseAuth from "../Hooks/UseAuth";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { axiosPublic } from "../Hooks/useAxiosPublic";
-import Swal from "sweetalert2";
 // import { Bloodtype } from "@mui/icons-material";
 const Register = () => {
     const [Blood, setBlood] = React.useState("");
@@ -102,23 +101,15 @@ const Register = () => {
             createUser(email, password)
                 .then(result => {
                     console.log(result.user)
-                })
-            toast.success("SuccessFully registered");
-            UserUpdate(name, imageURL)
-                .then((result) => {
-                    console.log(result);
-                    axiosPublic.post('/allUsers', userInfo)
-                        .then((res) => {
-                            if (res.data.insertedId) {
-                                // reset();
-                                Swal.fire({
-                                    position: "top-end",
-                                    icon: "success",
-                                    title: "User created successfully.",
-                                    showConfirmButton: false,
-                                    timer: 1500,
-                                });
-                            }
+                    UserUpdate(name, imageURL)
+                        .then(() => {
+                            axiosPublic.post('/allUsers', userInfo)
+                                .then((res) => {
+                                    if (res.data.insertedId) {
+                                        toast.success("You have Registered SuccessFully");
+                                        // reset();
+                                    }
+                                })
                         })
                 })
                 .catch(error => {
@@ -243,7 +234,7 @@ const Register = () => {
                                         to="/login"
                                         className="text-[#dc0202] font-semibold border-b-2 border-[#dc0202]"
                                     >
-                                        লগ ইন করুন। 
+                                        লগ ইন করুন।
                                     </Link>
                                 </p>
                             </div>
